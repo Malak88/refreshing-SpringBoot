@@ -1,0 +1,8 @@
+#=====Intead of this
+#malak.pro1.value = 1
+#malak.pro2.value = 2
+
+# ====> Try this
+# malak:
+#     pro1:
+#         value: 2
