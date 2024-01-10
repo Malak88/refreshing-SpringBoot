@@ -2,9 +2,11 @@ package com.malak.refreshdemo.student;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
@@ -14,12 +16,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 public class StudentController {
     
-    @GetMapping
+    //Dependency Injection
+    //@Autowired
+    private StudentService studentService;
 
-    public List<String> findAllStudents(){
-        return List.of(
-            "malak",
-            "Aladin"
-        );
+    ///////////////// Recommanded
+
+    //Constraction Injection
+    //@Autowired
+    // eleminate it bof using bean annotation restcontroller
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
     }
+    @GetMapping
+    public List<Student> findAllStudents(){
+        return studentService.findAllStudents();
+    }
+
+    
 }
