@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class StudentRepositoryDAO {
+public class InMemoryStudentDAO {
     
     private final List<Student> Students = new ArrayList<>();
 

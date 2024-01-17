@@ -1,15 +1,13 @@
 package com.malak.refreshdemo.student;
 
-import java.time.LocalDate;
 import java.util.List;
 
-import org.springframework.stereotype.Service;
 
 public interface StudentService {
     
-    Student saveStudent(Student s);
+    Student save(Student s);
 
-    List<Student> findAllStudents();
+    List<Student> findAll();
 
     Student findByEmail(String email);
 
