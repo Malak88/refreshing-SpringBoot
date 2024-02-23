@@ -16,6 +16,8 @@ public class Student {
     
     @Id
     @GeneratedValue
+    // Id automaticaly handled by hibernate
+    // @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "my_sequence")
     private Integer id;
     
     private String firstName;
